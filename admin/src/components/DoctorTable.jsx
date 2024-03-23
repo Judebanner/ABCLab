@@ -71,25 +71,25 @@ const DoctorTable = () => {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col justify-center items-center pt-[20px]">
       <a href="/adddoctor">
-      <button type="button" class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Add doctor</button>
+      <button type="button" className="w-[250px] h-[40px] bg-[#000537] font-semibold text-[#D4BC36] rounded-md ">Add doctor</button>
       </a>
       <div className="-m-1 overflow-x-auto">
         <div className="p-12 min-w-full inline-block align-middle">
           <div className="overflow-hidden">
-            <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+            <table className="min-w-full divide-y divide-gray-200 bg-[#000537] text-[#D4BC36] dark:divide-gray-700">
               <thead>
                 <tr>
-                  <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Name</th>
-                  <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Specialization</th>
-                  <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Actions</th>
+                  <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-[#D4BC36] uppercase">Name</th>
+                  <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-[#D4BC36] uppercase">Specialization</th>
+                  <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-[#D4BC36] uppercase">Actions</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
                 {doctor.map(doctor => (
                   <tr key={doctor.id}>
-                    <td className="px-6 py-4 whitespace-nowrap">{doctor.name}</td>
+                    <td className="px-6 py-4 whitespace-nowrap">{doctor.name}jjjj</td>
                     <td className="px-6 py-4 whitespace-nowrap">{doctor.specialization}</td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <button onClick={() => handleDelete(doctor.id)} className="text-red-500">Delete</button>

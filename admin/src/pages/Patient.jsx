@@ -5,8 +5,8 @@ const Patient = () => {
   return (
     
     <>
-    <div>
-    <h2 className="text-xl font-semibold text-red-600 mb-4">Patient Details</h2>
+    <div >
+    <h2 className="text-[32px] flex justify-center font-semibold text-black ">PATIENT DETAILS</h2>
     </div>
     <PatientTable/>
     </>

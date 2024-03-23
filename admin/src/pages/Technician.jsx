@@ -5,7 +5,7 @@ const Technician = () => {
   return (
     <>
     <div>
-    <h2 className="text-xl font-semibold text-red-600 mb-4">Technician Deatails</h2>
+    <h2 className="text-[32px] flex justify-center font-semibold text-black">Technician Deatails</h2>
     </div>
     <TechnicianTable/>
     </>

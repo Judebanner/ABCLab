@@ -45,30 +45,30 @@ const Payment = () => {
 
   return (
     <div className="container mx-auto">
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto bg-white p-8 rounded shadow-lg">
-        <h2 className="text-xl font-semibold text-red-600 mb-4">Payment Form</h2>
-        <div className="grid grid-cols-1 gap-4">
-          <div>
+      <form onSubmit={handleSubmit} className="w-[400px] mx-auto bg-[#000537] p-8 rounded shadow-lg flex  justify-center items-center flex-col">
+        <h2 className=" text-[20px] font-semibold text-[#D4BC36] mb-4">Payment Form</h2>
+        <div className="grid grid-cols-1 gap-8 text-white">
+        <div className="flex justify-between">
             <label htmlFor="patientId">Patient ID:</label>
             <input type="number" id="patientId" value={patientId} onChange={(e) => setPatientId(e.target.value)} className="input-field" />
           </div>
-          <div>
+          <div className="flex justify-between">
             <label htmlFor="amount">Amount:</label>
             <input type="number" id="amount" value={amount} onChange={(e) => setAmount(e.target.value)} className="input-field" />
           </div>
-          <div>
+          <div className="flex justify-between">
             <label htmlFor="cardNumber">Card Number:</label>
             <input type="text" id="cardNumber" value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} className="input-field" />
           </div>
-          <div>
+          <div className="flex justify-between">
             <label htmlFor="cardHolderName">Card Holder Name:</label>
             <input type="text" id="cardHolderName" value={cardHolderName} onChange={(e) => setCardHolderName(e.target.value)} className="input-field" />
           </div>
-          <div>
+          <div className="flex justify-between">
             <label htmlFor="cardExpiryDate">Card Expiry Date:</label>
             <input type="text" id="cardExpiryDate" value={cardExpiryDate} onChange={(e) => setCardExpiryDate(e.target.value)} className="input-field" />
           </div>
-          <div>
+          <div className="flex justify-between">
             <label htmlFor="cardCVV">Card CVV:</label>
             <input type="text" id="cardCVV" value={cardCVV} onChange={(e) => setCardCVV(e.target.value)} className="input-field" />
           </div>

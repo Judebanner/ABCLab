@@ -64,40 +64,40 @@ const AppointmentForm = () => {
 
   return (
     <div className="container mx-auto">
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto bg-white p-8 rounded shadow-lg">
-        <h2 className="text-xl font-semibold text-red-600 mb-4">Appointment Form</h2>
+      <form onSubmit={handleSubmit} className="w-[500px] mx-auto flex flex-col justify-center items-center bg-[#000537] text-white py-[50px] px-[30px] rounded shadow-lg">
+        <h2 className="text-xl font-semibold text-[#D4BC36] mb-4">Appointment Form</h2>
         <div className="grid grid-cols-1 gap-4">
-          <div>
+          <div className="flex justify-between">
             <label htmlFor="name">Name:</label>
-            <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} className="input-field" />
+            <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} className=" text-black font-medium w-[250px] h-[30px]" />
           </div>
-          <div>
+          <div className="flex justify-between">
             <label htmlFor="age">Age:</label>
-            <input type="number" id="age" value={age} onChange={(e) => setAge(e.target.value)} className="input-field" />
+            <input type="number" id="age" value={age} onChange={(e) => setAge(e.target.value)} className="input-field text-black font-medium w-[250px] h-[30px]" />
           </div>
-          <div>
+          <div className="flex justify-between">
             <label htmlFor="gender">Gender:</label>
-            <input type="text" id="gender" value={gender} onChange={(e) => setGender(e.target.value)} className="input-field" />
+            <input type="text" id="gender" value={gender} onChange={(e) => setGender(e.target.value)} className="input-field text-black font-medium w-[250px] h-[30px]" />
           </div>
-          <div>
+          <div className="flex justify-between">
             <label htmlFor="mobileNumber">Mobile Number:</label>
-            <input type="text" id="mobileNumber" value={mobileNumber} onChange={(e) => setMobileNumber(e.target.value)} className="input-field" />
+            <input type="text" id="mobileNumber" value={mobileNumber} onChange={(e) => setMobileNumber(e.target.value)} className="input-field text-black font-medium w-[250px] h-[30px]" />
           </div>
-          <div>
+          <div className="flex justify-between">
             <label htmlFor="reasonAppointment">Reason for Appointment:</label>
-            <input type="text" id="reasonAppointment" value={reasonAppointment} onChange={(e) => setReasonAppointment(e.target.value)} className="input-field" />
+            <input type="text" id="reasonAppointment" value={reasonAppointment} onChange={(e) => setReasonAppointment(e.target.value)} className="input-field text-black font-medium w-[250px] h-[30px]"  />
           </div>
-          <div>
+          <div className="flex justify-between">
             <label htmlFor="appointmentTime">Appointment Time:</label>
-            <input type="datetime-local" id="appointmentTime" value={appointmentTime} onChange={(e) => setAppointmentTime(e.target.value)} className="input-field" />
+            <input type="datetime-local" id="appointmentTime" value={appointmentTime} onChange={(e) => setAppointmentTime(e.target.value)} className="input-field text-black font-medium w-[250px] h-[30px]" />
           </div>
-          <div>
+          <div className="flex justify-between">
             <label htmlFor="appointmentNumber">Appointment Number:</label>
-            <input type="text" id="appointmentNumber" value={appointmentNumber} onChange={(e) => setAppointmentNumber(e.target.value)} className="input-field" />
+            <input type="text" id="appointmentNumber" value={appointmentNumber} onChange={(e) => setAppointmentNumber(e.target.value)} className="input-field text-black font-medium w-[250px] h-[30px]" />
           </div>
-          <div>
+          <div className="flex justify-between">
             <label htmlFor="selectedDoctor">Select Doctor:</label>
-            <select id="selectedDoctor" value={selectedDoctor} onChange={(e) => setSelectedDoctor(e.target.value)} className="input-field">
+            <select id="selectedDoctor" value={selectedDoctor} onChange={(e) => setSelectedDoctor(e.target.value)} className="input-field text-black font-medium w-[250px] h-[30px]">
               <option value="">Select Doctor</option>
               {doctors.map((doctor) => (
                 <option key={doctor.id} value={doctor.id}>{doctor.name}</option>

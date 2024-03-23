@@ -6,7 +6,7 @@ const Doctor = () => {
 
     <>
     <div>
-    <h2 className="text-xl font-semibold text-red-600 mb-4">Doctor Deatails</h2>
+    <h2 className="text-[32px] flex justify-center font-semibold text-black">DOCTOR DETAILS</h2>
     </div>
     <DoctorTable/>
     </>

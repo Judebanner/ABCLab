@@ -81,22 +81,22 @@ const PatientTable = () => {
     <div className="flex flex-col">
       <div className="-m-1 overflow-x-auto">
         <div className="p-12 min-w-full inline-block align-middle">
-          <div className="overflow-hidden">
-            <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+          <div className="overflow-hidden bg-[#000537] ">
+            <table className="min-w-full divide-y divide-gray-200 text-[16px] dark:divide-gray-700">
               <thead>
                 <tr>
-                  <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Name</th>
-                  <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Age</th>
-                  <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
-                  <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Mobile Number</th>
-                  <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Email</th>
-                  <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Actions</th>
+                  <th scope="col" className="px-6 py-3 text-start text-[16px] font-medium text-[#D4BC36] uppercase">Name</th>
+                  <th scope="col" className="px-6 py-3 text-start text-[16px] font-medium text-[#D4BC36] uppercase">Age</th>
+                  <th scope="col" className="px-6 py-3 text-start text-[16px] font-medium text-[#D4BC36] uppercase">Address</th>
+                  <th scope="col" className="px-6 py-3 text-start text-[16px] font-medium text-[#D4BC36] uppercase">Mobile Number</th>
+                  <th scope="col" className="px-6 py-3 text-start text-[16px] font-medium text-[#D4BC36] uppercase">Email</th>
+                  <th scope="col" className="px-6 py-3 text-start text-[16px] font-medium text-[#D4BC36] uppercase">Actions</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
                 {patients.map(patient => (
                   <tr key={patient.id}>
-                    <td className="px-6 py-4 whitespace-nowrap">{patient.name}</td>
+                    <td className="px-6 py-4 bg-black whitespace-nowrap">{patient.name} </td>
                     <td className="px-6 py-4 whitespace-nowrap">{patient.age}</td>
                     <td className="px-6 py-4 whitespace-nowrap">{patient.address}</td>
                     <td className="px-6 py-4 whitespace-nowrap">{patient.mobileNumber}</td>

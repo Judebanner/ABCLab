@@ -49,19 +49,19 @@ const AppointmentTable = () => {
 
   return (
     <div className="container mx-auto">
-      <h2 className="text-xl font-semibold text-red-600 mb-4">Appointment Table</h2>
+      <h2 className="text-[32px] px-[32px] font-semibold text-black mb-4">Appointment Table</h2>
       <table className="min-w-full divide-y divide-gray-200">
-        <thead className="bg-gray-50">
+        <thead className="bg-[#000537]">
           <tr>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Age</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Gender</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Mobile Number</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Reason for Appointment</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Appointment Time</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Appointment Number</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Doctor</th>
-            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+            <th scope="col" className="px-6 py-3 text-left text-xs font-medium cuppercase tracking-wider">Name</th>
+            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-[#D4BC36] uppercase tracking-wider">Age</th>
+            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-[#D4BC36] uppercase tracking-wider">Gender</th>
+            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-[#D4BC36] uppercase tracking-wider">Mobile Number</th>
+            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-[#D4BC36] uppercase tracking-wider">Reason for Appointment</th>
+            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-[#D4BC36] uppercase tracking-wider">Appointment Time</th>
+            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-[#D4BC36] uppercase tracking-wider">Appointment Number</th>
+            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-[#D4BC36] uppercase tracking-wider">Doctor</th>
+            <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-[#D4BC36] uppercase tracking-wider">Actions</th>
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
