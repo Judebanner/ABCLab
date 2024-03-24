@@ -72,7 +72,22 @@ const TestTable = () => {
     fetchTechnicians();
   }, []);
 
+  // const handleDelete = async (id) => {
+  //   try {
+  //     await axios.delete(`http://localhost:8080/api/tests/delete/${id}`);
+  //     setTests(tests.filter((test) => test.id !== id));
+  //   } catch (error) {
+  //     console.error("Error deleting test:", error);
+  //   }
+  // };
   const handleDelete = async (id) => {
+    // Display confirmation dialog before deleting
+    const isConfirmed = window.confirm('Are you sure you want to delete this test?');
+    
+    if (!isConfirmed) {
+      return; // If not confirmed, do nothing
+    }
+  
     try {
       await axios.delete(`http://localhost:8080/api/tests/delete/${id}`);
       setTests(tests.filter((test) => test.id !== id));
@@ -80,6 +95,8 @@ const TestTable = () => {
       console.error("Error deleting test:", error);
     }
   };
+
+
 
   const handleDownloadPDF = (test) => {
     try {

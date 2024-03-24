@@ -26,7 +26,28 @@ const TechnicianTable = () => {
     fetchData();
   }, []); // Empty dependency array ensures it runs only once
 
+  // const handleDelete = async (id) => {
+  //   try {
+  //     const response = await fetch(`http://localhost:8080/api/technicians/delete/${id}`, {
+  //       method: 'DELETE',
+  //     });
+  //     if (!response.ok) {
+  //       throw new Error('Failed to delete technician');
+  //     }
+  //     // Update Technician state after successful deletion
+  //     setTechnician(technician.filter(technician => technician.id !== id));
+  //   } catch (error) {
+  //     console.error('Error deleting technician:', error);
+  //   }
+  // };
   const handleDelete = async (id) => {
+    // Display confirmation dialog before deleting
+    const isConfirmed = window.confirm('Are you sure you want to delete this technician?');
+    
+    if (!isConfirmed) {
+      return; // If not confirmed, do nothing
+    }
+  
     try {
       const response = await fetch(`http://localhost:8080/api/technicians/delete/${id}`, {
         method: 'DELETE',
@@ -40,6 +61,10 @@ const TechnicianTable = () => {
       console.error('Error deleting technician:', error);
     }
   };
+  
+
+
+
 
   const handleEdit = (technician) => {
     setEditingTechnician(technician);

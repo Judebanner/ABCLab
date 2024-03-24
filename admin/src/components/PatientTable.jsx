@@ -29,7 +29,28 @@ const PatientTable = () => {
     fetchData();
   }, []); // Empty dependency array ensures it runs only once
 
+  // const handleDelete = async (id) => {
+  //   try {
+  //     const response = await fetch(`http://localhost:8080/api/patients/delete/${id}`, {
+  //       method: 'DELETE',
+  //     });
+  //     if (!response.ok) {
+  //       throw new Error('Failed to delete patient');
+  //     }
+  //     // Update patients state after successful deletion
+  //     setPatients(patients.filter(patient => patient.id !== id));
+  //   } catch (error) {
+  //     console.error('Error deleting patient:', error);
+  //   }
+  // };
   const handleDelete = async (id) => {
+    // Display confirmation dialog before deleting
+    const isConfirmed = window.confirm('Are you sure you want to delete this patient?');
+    
+    if (!isConfirmed) {
+      return; // If not confirmed, do nothing
+    }
+  
     try {
       const response = await fetch(`http://localhost:8080/api/patients/delete/${id}`, {
         method: 'DELETE',
@@ -43,6 +64,11 @@ const PatientTable = () => {
       console.error('Error deleting patient:', error);
     }
   };
+  
+
+
+
+
   const handleEdit = (patient) => {
     setEditingPatient(patient);
     setEditedName(patient.name);

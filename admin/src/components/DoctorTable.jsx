@@ -26,7 +26,28 @@ const DoctorTable = () => {
     fetchData();
   }, []); // Empty dependency array ensures it runs only once
 
+  // const handleDelete = async (id) => {
+  //   try {
+  //     const response = await fetch(`http://localhost:8080/api/doctors/delete/${id}`, {
+  //       method: 'DELETE',
+  //     });
+  //     if (!response.ok) {
+  //       throw new Error('Failed to delete doctor');
+  //     }
+  //     // Update doctor state after successful deletion
+  //     setDoctor(doctor.filter(doctor => doctor.id !== id));
+  //   } catch (error) {
+  //     console.error('Error deleting doctor:', error);
+  //   }
+  // };
   const handleDelete = async (id) => {
+    // Display confirmation dialog before deleting
+    const isConfirmed = window.confirm('Are you sure you want to delete this doctor?');
+    
+    if (!isConfirmed) {
+      return; // If not confirmed, do nothing
+    }
+  
     try {
       const response = await fetch(`http://localhost:8080/api/doctors/delete/${id}`, {
         method: 'DELETE',
@@ -40,6 +61,10 @@ const DoctorTable = () => {
       console.error('Error deleting doctor:', error);
     }
   };
+  
+
+
+
 
   const handleEdit = (doctor) => {
     setEditingDoctor(doctor);

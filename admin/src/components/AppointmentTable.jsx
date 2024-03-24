@@ -36,7 +36,23 @@ const AppointmentTable = () => {
     fetchDoctors();
   }, []);
 
+  // const handleDelete = async (id) => {
+  //   try {
+  //     await axios.delete(`http://localhost:8080/api/appointments/delete/${id}`);
+  //     setAppointments(appointments.filter((appointment) => appointment.id !== id));
+  //   } catch (error) {
+  //     console.error("Error deleting appointment:", error);
+  //   }
+  // };
+
   const handleDelete = async (id) => {
+    // Display confirmation dialog before deleting
+    const isConfirmed = window.confirm('Are you sure you want to delete this appointment?');
+    
+    if (!isConfirmed) {
+      return; // If not confirmed, do nothing
+    }
+  
     try {
       await axios.delete(`http://localhost:8080/api/appointments/delete/${id}`);
       setAppointments(appointments.filter((appointment) => appointment.id !== id));
@@ -44,7 +60,6 @@ const AppointmentTable = () => {
       console.error("Error deleting appointment:", error);
     }
   };
-
   
 
   return (
